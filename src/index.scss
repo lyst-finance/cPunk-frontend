@@ -1,0 +1,20 @@
+@import '../src/assets/variables';
+@import './assets/reboot';
+@import './assets/mixins';
+
+.main {
+  position: relative;
+  &-wrapper {
+    display: flex;
+    min-height: 100vh;
+  }
+  &-content {
+    flex-grow: 1;
+    .page {
+      @include container;
+      &-content {
+        background: $ice;
+      }
+    }
+  }
+}

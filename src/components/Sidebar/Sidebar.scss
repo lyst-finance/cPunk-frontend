@@ -1,0 +1,46 @@
+@import './../../assets/variables';
+
+.sidebar {
+  width: 100%;
+  max-width: 265px;
+  background: $primery;
+  color: $ice;
+  &-logo {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: $primery;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    border-bottom: 1px solid $primery;
+  }
+  .menu {
+    margin: 140px auto 15px;
+    padding: 0 15px;
+    
+    li {
+      padding: 20px 15px;
+      &.active {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: $border-radius;
+      }
+      a {
+        position: relative;
+        padding-left: 40px;
+        font-weight: 500;
+        svg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: ($breakpoint)) {
+    display: none;
+  }
+}

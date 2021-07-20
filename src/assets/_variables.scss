@@ -1,0 +1,38 @@
+/* Palette */
+$blueGray: #263238;
+$darkGray: #455A64;
+$steel: #90A4AE;
+$fog: #B0BEC5;
+$silver: #CFD8DC;
+$silverLight: #F7F8F9;
+$snow: #FCFDFD;
+$ice: #FFFFFF;
+$blue: #56F9FF;
+$darkPurple: #341B4F;
+$primery: #7553FD;
+$primeryDark: #6246CE;
+
+/* Colors */
+$hr: $silver;
+$bg: #F5F7FC;
+$sidebar: $primery;
+$text: $darkGray;
+$button: $ice;
+$boxShadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+$border-radius: 10px;
+
+/* Fonts */
+$font-size: 14px;
+$font-family: 'Work Sans', sans-serif;
+
+/* Sizes */
+$max-width: 1104px;
+$header-height: 64px;
+
+$breakpoint: 992px;
+
+/* Transitions */
+$transition-duration: 0.2s;
+
+/* Z-indexes */
+$zindex-sticky: 1020;

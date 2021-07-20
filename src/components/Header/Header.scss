@@ -1,0 +1,46 @@
+
+@import './../../assets/variables';
+@import './../../assets/mixins';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+  height: $header-height;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $primeryDark;
+  background-color: $ice;
+  @media (max-width: ($breakpoint)) {
+    background-color: $primery;
+  }
+  &-logo {
+    display: none;
+    @media (max-width: ($breakpoint)) {
+      display: block;
+    }
+  }
+  &-links {
+    display: inline-flex;
+    color: $primery;
+    margin-right: 0;
+    margin-left: auto;
+    @media (max-width: ($breakpoint)) {
+      color: $ice;
+    }
+    li {
+      margin-left: 15px;
+    }
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+  }
+  .container {
+    @include container;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+

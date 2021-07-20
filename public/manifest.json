@@ -1,0 +1,8 @@
+{
+  "short_name": "Catalyst",
+  "name": "Catalyst",
+  "icons": [],
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
