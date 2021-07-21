@@ -9,10 +9,10 @@
   height: $header-height;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid $primeryDark;
+  border-bottom: 1px solid $primaryDark;
   background-color: $ice;
   @media (max-width: ($breakpoint)) {
-    background-color: $primery;
+    background-color: $primary;
   }
   &-logo {
     display: none;
@@ -22,7 +22,7 @@
   }
   &-links {
     display: inline-flex;
-    color: $primery;
+    color: $primary;
     margin-right: 0;
     margin-left: auto;
     @media (max-width: ($breakpoint)) {
@@ -30,11 +30,19 @@
     }
     li {
       margin-left: 15px;
+      a {
+        display: flex;
+        svg {
+          width: 34px;
+          height: 34px;
+          @media (max-width: ($breakpoint)) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
     }
-    svg {
-      width: 34px;
-      height: 34px;
-    }
+   
   }
   .container {
     @include container;

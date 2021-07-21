@@ -8,8 +8,8 @@
     z-index: 1;
     bottom: 0;
     left: 0;
-    background: $primery;
-    border-top: 1px solid $primery;
+    background: $primary;
+    border-top: 1px solid $primary;
     ul {
       display: flex;
       width: 100%;
@@ -31,6 +31,10 @@
           text-transform: uppercase;
           text-align: center;
           color: $ice;
+          font-size: 9px;
+          svg {
+            margin-bottom: 4px;
+          }
         }
       }
     }

@@ -1,0 +1,52 @@
+@import './../../assets/variables';
+
+.dashboard {
+  .masonry {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @media (max-width: ($breakpoint)) {
+      flex-direction: column;
+    }
+    &-row {
+      flex: 1 1;
+      + .masonry-row {
+        margin-left: 30px;
+        @media (max-width: ($breakpoint)) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .ratio-chart {
+    display: flex;
+    height: 64px;
+    margin: 70px 0 23px;
+    @media (max-width: ($breakpoint)) {
+      margin-top: 30px;
+    }
+    > div {
+      height: 100%;
+      flex-grow: 1;
+    }
+  }
+  .pie-chart {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    &-canvas {
+      max-width: 240px;
+      margin: 0 auto;
+    }
+    .legend {
+      flex-direction: column;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      max-height: 250px;
+      li {
+        margin-right: 17px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

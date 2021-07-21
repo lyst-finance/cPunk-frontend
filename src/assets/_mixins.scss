@@ -10,7 +10,25 @@
   font-weight: 600;
   font-size: 40px;
   line-height: 1.18;
-  color: $primery;
+  color: $primary;
   margin-top: 50px;
   margin-bottom: 30px;
+  @media (max-width: ($breakpoint)) {
+   font-size: 24px;
+   margin: 25px 0;
+  }
 }
+
+@mixin h2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.19;
+  color: $primary;
+}
+
+@mixin smallText {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+

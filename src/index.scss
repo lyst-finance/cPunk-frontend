@@ -10,10 +10,13 @@
   }
   &-content {
     flex-grow: 1;
+    @media (min-width: ($breakpoint + 1px)) {
+      padding-left: 265px;
+    }
     .page {
       @include container;
-      &-content {
-        background: $ice;
+      @media (max-width: ($breakpoint)) {
+        padding-bottom: $header-height;
       }
     }
   }

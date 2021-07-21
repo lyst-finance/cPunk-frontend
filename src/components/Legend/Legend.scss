@@ -1,0 +1,36 @@
+@import './../../assets/variables';
+
+.legend {
+  display: flex;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  li {
+    margin-right: 70px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: ($breakpoint)) {
+      margin-right: 10%;
+    }
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  &-square {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+  }
+  &-title {
+    text-transform: uppercase;
+    color: $steel;
+  }
+  &-value {
+    padding-left: 11px;
+    color: $primary;
+  }
+}

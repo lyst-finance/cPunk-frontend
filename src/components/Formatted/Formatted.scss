@@ -1,0 +1,25 @@
+@import './../../assets/variables';
+@import './../../assets/mixins';
+
+.formatted {
+  font-weight: 500;
+  color: $darkPurple;
+  font-size: 36px;
+  line-height: 1.17;
+  @media (max-width: ($breakpoint)) {
+    font-size: 24px;
+  }
+  small {
+    padding-left: 5px;
+    @include smallText;
+    color: $primary;
+  }
+  &.sm {
+    font-size: 14px;
+    line-height: 16px;
+    small {
+      padding-left: 2px;
+      color: inherit;
+    }
+  }
+}

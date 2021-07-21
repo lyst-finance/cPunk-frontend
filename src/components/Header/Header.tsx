@@ -21,12 +21,12 @@ const Header: React.FC = () => {
           </li>
           <li>
             <a href='/' target='_blank' rel='noopener noreferrer'>
-              <IconGithub />
+              <IconDiscord />
             </a>
           </li>
           <li>
             <a href='/' target='_blank' rel='noopener noreferrer'>
-              <IconDiscord />
+              <IconGithub />
             </a>
           </li>
         </ul>

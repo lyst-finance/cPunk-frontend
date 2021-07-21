@@ -1,0 +1,27 @@
+@import './../../assets/mixins';
+
+.card {
+  padding: 30px;
+  background: $ice;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  margin-bottom: 30px;
+  @media (max-width: ($breakpoint)) {
+    padding: 25px 15px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    @include h2;
+    margin-bottom: 15px;
+  }
+  .not-launched {
+    margin-top: 10px;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    color: $darkPurple;
+    @media (max-width: ($breakpoint)) {
+      font-size: 24px;
+    }
+  }
+}
