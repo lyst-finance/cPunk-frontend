@@ -6,6 +6,7 @@
   box-shadow: $box-shadow;
   border-radius: $border-radius;
   margin-bottom: 30px;
+  overflow: hidden;
   @media (max-width: ($breakpoint)) {
     padding: 25px 15px;
     margin-bottom: 15px;

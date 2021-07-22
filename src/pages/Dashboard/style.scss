@@ -49,4 +49,13 @@
       }
     }
   }
+  .bar-chart {
+    width: calc(100% + 60px);
+    height: 250px;
+    margin: 15px -30px -30px -30px;
+    @media (max-width: ($breakpoint)) {
+      width: calc(100% + 30px);
+      margin: 15px -15px -25px -15px;
+    }
+  }
 }
