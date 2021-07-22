@@ -4,7 +4,7 @@ import LystSupply from './LystSupply'
 import LystPrice from './LystSupply'
 import TokenDistribution from './TokenDistribution'
 import TVL from './TVL'
-import './style.scss'
+import './Dashboard.scss'
 
 const Dashboard = () => {
   return (

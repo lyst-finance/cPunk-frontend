@@ -1,0 +1,8 @@
+@import './../../assets/mixins';
+
+.calculator {
+  max-width: 522px;
+  margin-left: auto;
+  margin-right: auto;
+  @include form;
+}

@@ -14,8 +14,8 @@
   margin-top: 50px;
   margin-bottom: 30px;
   @media (max-width: ($breakpoint)) {
-   font-size: 24px;
-   margin: 25px 0;
+    font-size: 24px;
+    margin: 25px 0;
   }
 }
 
@@ -31,4 +31,74 @@
   line-height: 14px;
 }
 
+@mixin form {
+  .form-item {
+    position: relative;
+    margin-bottom: 30px;
+    &.last:last-child {
+      margin-bottom: 0;
+    }
+    &-wrap {
+      position: relative;
+      display: flex;
+       > *:last-child:not(:first-child) {
+        margin-left: 60px;
+        flex-shrink: 0;
+      }
+    }
+   
+    .input-wrap {
+      width: 100%;
+      height: 36px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      background: $ice;
+      border: 1px solid $silver;
+      border-radius: 47px;
+      color: $darkPurple;
+      font-weight: 500;
+      input {
+        flex-grow: 1;
+      }
+      span {
+        padding-left: 15px;
+        font-weight: 400;
+        color: $darkGray;
+      }
+    }
+  }
+  .form-help-text {
+    position: absolute;
+    bottom: -18px;
+    left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .form-label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: $primary;
+  }
+  button {
+    @include button;
+  }
+}
 
+@mixin button {
+  width: 153px;
+  height: 36px;
+  background: $primary;
+  border-radius: 18px;
+  font-weight: 500;
+  color: $ice;
+  &:disabled {
+    background: $fog;
+    cursor: auto;
+  }
+}

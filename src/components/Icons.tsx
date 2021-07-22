@@ -189,3 +189,20 @@ export const IconDiscord = () => {
     </svg>
   )
 }
+
+export const IconDown = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="8"
+      fill="none"
+      viewBox="0 0 12 8"
+    >
+      <path
+        fill="currentColor"
+        d="M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6L1.41 0z"
+      ></path>
+    </svg>
+  )
+}

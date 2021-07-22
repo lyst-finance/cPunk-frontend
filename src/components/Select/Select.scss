@@ -1,0 +1,40 @@
+@import '../../assets/variables';
+
+.select {
+  &-label {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &-list {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: $ice;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    li {
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: color $transition-duration;
+      &:hover {
+        background: $silverLight;
+      }
+    }
+    &-container {
+      position: relative;
+    }
+  }
+}

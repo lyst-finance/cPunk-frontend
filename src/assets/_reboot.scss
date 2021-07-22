@@ -119,7 +119,13 @@ textarea {
   resize: none;
 }
 
+select,
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+::placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: $darkGray;
 }
