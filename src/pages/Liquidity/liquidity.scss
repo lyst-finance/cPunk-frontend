@@ -1,7 +1,11 @@
 @import './../../assets/mixins';
 @import './../../assets/variables';
 
-.calculator {
+.liquidity {
   @include containerSm;
   @include form;
+  .form-item {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $silver;
+  }
 }

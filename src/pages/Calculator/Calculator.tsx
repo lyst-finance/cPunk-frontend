@@ -13,13 +13,23 @@ const Calculator = () => {
   }
   const { register, handleSubmit } = useForm<IFormData>()
 
+  interface ISelectOptions {
+    value: string
+    label: string
+    logo? : string,
+  }
+
   const [formValues, setFormValues] = useState({
     nft: '',
     id: '',
     characteristic1: '',
     characteristic2: '',
   })
-  const [selectValue, setSelectValue] = useState('')
+
+  const [selectedOption, setSelectedOption] = useState<ISelectOptions>({
+    value: '',
+    label: '',
+  })
 
   useEffect(() => {
     onSubmit(formValues)
@@ -29,7 +39,7 @@ const Calculator = () => {
   const onSubmit: SubmitHandler<IFormData> = (data) => {
     data = {
       ...data,
-      nft: selectValue,
+      nft: selectedOption.value,
     }
     console.log(data)
   }
@@ -56,9 +66,10 @@ const Calculator = () => {
               name='nft'
               options={selectOptions}
               placeholder='Select NFT market:'
-              onChange={(value) => {
-                setSelectValue(value)
-                setFormValues({ ...formValues, nft: value })
+              defaultValue={selectedOption}
+              onChange={(selectedOption) => {
+                setSelectedOption(selectedOption)
+                setFormValues({ ...formValues, nft: selectedOption.value })
               }}
             />
           </div>

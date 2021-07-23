@@ -1,7 +1,9 @@
 @import './../../assets/mixins';
 @import './../../assets/variables';
 
-.calculator {
-  @include containerSm;
-  @include form;
+.borrow {
+  &.open {
+    @include containerSm;
+    @include form;
+  }
 }

@@ -1,0 +1,77 @@
+@import './../../assets/variables';
+
+.table {
+	padding-top: 15px;
+  &-wrapper {
+    background: $ice;
+  }
+	ul {
+		li {
+			margin-bottom: 15px;
+		}
+	}
+	.table-header {
+		font-weight: 500;
+		display: flex;
+		li {
+			flex-grow: 1;
+			flex-shrink: 0;
+			width: 18%;
+			&:first-child {
+				width: 28%;
+				flex-grow: 1;
+				flex-shrink: 1;
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 15px;
+			}
+		}
+	}
+	.table-body {
+		display: flex;
+		li {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			height: 50px;
+			cursor: pointer;
+			&:hover {
+				background: $silverLight;
+				transition: background-color $transition-duration;
+			}
+			& > div {
+				flex-grow: 1;
+				flex-shrink: 0;
+				width: 18%;
+				&:first-child {
+					display: flex;
+					align-items: center;
+					width: 28%;
+					padding-left: 30px;
+					flex-shrink: 1;
+					padding-left: 30px;
+					img {
+						margin-right: 5px;
+					}
+					strong {
+						font-weight: 700;
+					}
+				}
+				&.colored {
+					* {
+						color: $primary;
+					}
+				}
+				&:last-child {
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+	.formatted {
+		small {
+			font-weight: 400;
+		}
+	}
+}

@@ -4,44 +4,43 @@ import Dropdown from '../Dropdown/Dropdown'
 import './Select.scss'
 
 interface ISelect {
-  register?: any
-  options: IOptions[]
+  options: ISelectOptions[]
   name: string
-  onChange: (params: string) => void
-  defaultValue?: string
+  onChange: (params: ISelectOptions) => void
+  defaultValue: ISelectOptions
   placeholder?: string
 }
-interface IOptions {
+interface ISelectOptions {
   value: string
   label: string
+  logo?: string
 }
 
 const Select: React.FC<ISelect> = ({
   options,
   placeholder,
+  defaultValue,
   name,
   onChange,
 }) => {
   const [open, setOpen] = useState(false)
-  const [selectedOption, setSelectedOption] = useState<string>('')
 
-  const handleClick = (value: string) => {
-    setSelectedOption(value)
+  const handleChange = (option: ISelectOptions) => {
     setOpen(false)
-    onChange(value)
+    onChange(option)
   }
 
   return (
-    <>
+    <div className='select'>
       <div className='select-label' onClick={() => setOpen(!open)}>
-      <div className='input-wrap'>
-        <input
-          name={name}
-          type='text'
-          readOnly
-          placeholder={selectedOption || placeholder}
-          value={selectedOption}
-        />
+        <div className='input-wrap'>
+          <input
+            name={name}
+            type='text'
+            readOnly
+            placeholder={defaultValue.label || placeholder}
+            value={defaultValue.label}
+          />
         </div>
         <div className='select-icon'>
           <IconDown />
@@ -54,10 +53,13 @@ const Select: React.FC<ISelect> = ({
               {options.map((option) => {
                 return (
                   <li
-                    className={selectedOption === option.label ? 'active' : ''}
-                    onClick={() => handleClick(option.label)}
+                    className={
+                      defaultValue.label === option.label ? 'active' : ''
+                    }
+                    onClick={() => handleChange(option)}
                     key={option.value}
                   >
+                    {option.logo && <img src={option.logo} alt={option.label} />}
                     {option.label}
                   </li>
                 )
@@ -66,7 +68,7 @@ const Select: React.FC<ISelect> = ({
           </div>
         </Dropdown>
       )}
-    </>
+    </div>
   )
 }
 

@@ -4,6 +4,9 @@
   &-label {
     position: relative;
   }
+  input {
+    cursor: pointer;
+  }
   &-icon {
     position: absolute;
     right: 16px;
@@ -26,15 +29,51 @@
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     li {
+      display: flex;
+      align-items: center;
       padding: 10px 15px;
       cursor: pointer;
       transition: color $transition-duration;
       &:hover {
         background: $silverLight;
       }
+      img {
+        margin-right: 5px;
+      }
     }
     &-container {
       position: relative;
+    }
+  }
+  &-sm {
+    display: flex;
+    align-items: center;
+    border: 1px solid $silver;
+    border-radius: 23px;
+    padding: 0 16px;
+    > img {
+      margin-right: 5px;
+    }
+    .right-label {
+      flex-grow: 1;
+    }
+    .select {
+      .select-label {
+        .input-wrap {
+          border: none;
+          padding: 0;
+          input {
+            width: 100px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .select-list-container {
+      position: static;
+    }
+    .select-list {
+      top: 80px;
     }
   }
 }
